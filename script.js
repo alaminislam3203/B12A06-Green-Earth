@@ -108,11 +108,9 @@ const loadPlantsByCategory = async(id) => {
     const url = `https://openapi.programming-hero.com/api/category/${id}`;
     const res = await fetch(url);
     const data = await res.json();
-  showPlantsByCategory(data.plants, id);
-  
+    showPlantsByCategory(data.plants, id);
+}
 
-
-  
 // Show Plants by Selected Category
 const showPlantsByCategory = (plants, id) => {
     removeActive();
@@ -148,7 +146,6 @@ const showPlantsByCategory = (plants, id) => {
     manageLoader(false);
 }
 
-
 // ===============================
 // Plant Details Modal Section
 // ===============================
@@ -172,8 +169,6 @@ const showPlantDetail = (plant) => {
         <p><strong>Description:</strong> ${plant.description}</p>
     `;
 }
-
-
 
 // ===============================
 // Cart Section
@@ -242,4 +237,4 @@ const removeCart = (plantName) => {
 // Init Functions
 // ===============================
 loadAllCategories();
-  loadAllPlants();
+loadAllPlants();
