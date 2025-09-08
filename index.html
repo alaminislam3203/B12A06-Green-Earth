@@ -17,7 +17,56 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="font-[sans-serif] text-[#1f2937]">
+
+    <!-- ===========================
+         Navbar Section
+         =========================== -->
+    <header>
+        <nav class="navbar bg-green-700 text-white shadow-sm p-4">
+            <!-- Navbar Start -->
+            <div class="navbar-start">
+                <!-- Mobile Dropdown Menu -->
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow bg-[#15803d] border-green-800 border-2">
+                        <li><a href="#" class="font-medium hover:underline underline-offset-4">About</a></li>
+                        <li><a href="#" class="font-medium hover:underline underline-offset-4">Gallery</a></li>
+                        <li><a href="#" class="font-medium hover:underline underline-offset-4">Plant a Tree</a></li>
+                    </ul>
+                </div>
+
+                <!-- Logo -->
+                <h1 class="font-bold text-white text-[18px] lg:ml-20">
+                    <span class="text-green-500"><i class="fa-solid fa-tree"></i></span> Green Earth
+                </h1>
+            </div>
+
+            <!-- Navbar Center (Desktop Links) -->
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="#" class="font-medium hover:underline underline-offset-4">About</a></li>
+                    <li><a href="#" class="font-medium hover:underline underline-offset-4">Gallery</a></li>
+                    <li><a href="#" class="font-medium hover:underline underline-offset-4">Plant a Tree</a></li>
+                </ul>
+            </div>
+
+            <!-- Navbar End (CTA Button) -->
+            <div class="navbar-end pr-4">
+                <a href="#"
+                    class="btn rounded-full bg-[#facc15] text-[#15803d] border-0 shadow-none hover:scale-105 transition-transform duration-100 ease-in-out cursor-pointer lg:mr-20">Plant
+                    a Tree</a>
+            </div>
+        </nav>
+    </header>
+
 
 </body>
 
