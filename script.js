@@ -147,3 +147,28 @@ const showPlantsByCategory = (plants, id) => {
     });
     manageLoader(false);
 }
+
+
+// ===============================
+// Plant Details Modal Section
+// ===============================
+const loadPlantDetail = async(id) => {
+    const url = `https://openapi.programming-hero.com/api/plant/${id}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    showPlantDetail(data.plants);
+}
+
+const showPlantDetail = (plant) => {
+    const plantModal = document.getElementById("plant_modal");
+    const plantDetail = document.getElementById("plant-detail");
+
+    plantModal.showModal();
+    plantDetail.innerHTML = `
+        <h3 class="text-2xl font-semibold">${plant.name}</h3>
+        <img src="${plant.image}" alt="${plant.name}" class="w-full h-60 object-cover rounded-xl">
+        <p><strong>Category:</strong> ${plant.category}</p>
+        <p><strong>Price:</strong> ৳${plant.price}</p>
+        <p><strong>Description:</strong> ${plant.description}</p>
+    `;
+}
