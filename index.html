@@ -82,7 +82,30 @@
             </div>
         </section>
 
+        <!-- ===========================
+             Choose Your Trees Section
+             =========================== -->
+        <section class="py-10 px-4 bg-[#f0fdf4]">
+            <div class="max-w-[1920px] mx-auto">
+                <h2 class="text-center text-3xl font-semibold mb-6">Choose Your Trees</h2>
+                <div class="grid grid-cols-12 gap-4 items-start">
+                    <!-- Categories Sidebar -->
+                    <div class="xl:col-span-2 md:col-span-4 col-span-full">
+                        <h4 class="font-semibold text-xl mb-6 max-md:text-center">Categories</h4>
+                        <ul id="category-list" class="flex md:flex-col flex-wrap max-md:justify-center gap-3">
+                            <li id="tree-all" onclick="loadAllPlants()"
+                                class="px-3 py-2 cursor-pointer rounded duration-300 hover:bg-[#15803d] hover:text-white">
+                                All Trees
+                            </li>
+                        </ul>
+                    </div>
+
+
+
     </main>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
